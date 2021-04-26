@@ -1,0 +1,25 @@
+{
+  "name": "localwebplayer2",
+  "version": "1.0.0",
+  "description": "Local platform to play video sources either local or online with subtitle",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js -o dist/bundle.js",
+    "watch": "watchify index.js -o dist/bundle.js -v"
+  },
+  "author": "Masoud Rahmani",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "subsrt": "^1.1.1",
+    "watchify": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "babelify": "^10.0.0"
+  },
+  "browserify": {
+    "transform": [["babelify", { "presets": ["@babel/preset-env"] }]]
+  }
+}
